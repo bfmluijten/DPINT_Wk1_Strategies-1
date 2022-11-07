@@ -98,7 +98,7 @@ namespace DPINT_Wk1_Strategies
             }
             catch (FormatException)
             {
-                ToText = "-";
+                ToText = "ERROR";
             }
         }
     }
