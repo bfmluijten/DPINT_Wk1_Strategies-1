@@ -96,7 +96,7 @@ namespace DPINT_Wk1_Strategies
                 int number = _fromConverter.ToNumerical(FromText);
                 ToText = _toConverter.ToLocalString(number);
             }
-            catch (FormatException ex)
+            catch (FormatException)
             {
                 ToText = "-";
             }
