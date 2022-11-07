@@ -23,6 +23,7 @@ namespace DPINT_Wk1_Strategies.Converters
             _converters["Hexadecimal"] = new HexadecimalNumberConverter();
             _converters["Numerical"] = new NumericalNumberConverter();
             _converters["Roman"] = new RomanNumberConverter();
+            _converters["Octal"] = new OctalNumberConverter();
         }
 
         public INumberConverter GetConverter(string name)
