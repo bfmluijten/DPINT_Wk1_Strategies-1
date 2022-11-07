@@ -29,7 +29,7 @@ namespace DPINT_Wk1_Strategies.Converters
             foreach (var c in number)
             {
                 if (!_romanMap.ContainsKey(c))
-                    return -1;
+                    throw new FormatException();
                 var crtValue = _romanMap[c];
                 totalValue += crtValue;
                 if (prevValue != 0 && prevValue < crtValue)
@@ -39,7 +39,7 @@ namespace DPINT_Wk1_Strategies.Converters
                         || prevValue == 100 && (crtValue == 500 || crtValue == 1000))
                         totalValue -= 2 * prevValue;
                     else
-                        return -1;
+                        throw new FormatException();
                 }
                 prevValue = crtValue;
             }

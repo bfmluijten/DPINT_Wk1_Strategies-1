@@ -94,7 +94,7 @@ namespace DPINT_Wk1_Strategies
             try
             {
                 int number = _fromConverter.ToNumerical(FromText);
-                ToText = number < 0 ? "-" : _toConverter.ToLocalString(number);
+                ToText = _toConverter.ToLocalString(number);
             }
             catch (FormatException ex)
             {
